@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head> <title>jQuery goes to DOM-ville</title>
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <style>
+        #change_me {
+            position: absolute;
+            top: 100px;
+            left: 400px;
+            font: 24px arial;}
+        #move_up #move_down #color #disappear {
+            padding: 5px;}
+    </style>
+    <script src="scripts/jquery-2.1.3.min.js"></script>
+    <script src="scripts/animate.js"></script>
+</head>
+<body>
+<div id="header">
+    <p>Demo for animation event</p>
+    <button id="move_up">Move Up</button>
+<button id="move_down">Move Down</button>
+<button id="color">Change Color</button>
+<button id="disappear">Disappear/Re-appear</button>
+<div id="change_me">Make Me Do Stuff!</div>
+<div id="demo">look the stuff</div>
+
+
+
+    </div>
+
+</div>
+<script>
+    $(document).ready(function() {
+        setInterval(function() {
+            $('#change_me').animate( { backgroundColor: 'red' }, 300)
+                    .animate( { backgroundColor: 'green' }, 300);
+        }, 1000);
+
+    });
+    $(document).ready(function() {
+        setInterval(function(){
+        $("#change_me").animate({top:30},200)},1000);
+     });//end move_up
+    $(document).ready(function() {
+        setInterval(function(){
+            $("#change_me").animate({color:'purple'},200)},1000);
+    });//end move_up
+
+
+</script>
+
+</body>
+</html>

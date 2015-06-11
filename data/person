@@ -1,0 +1,9 @@
+{
+  "person":
+    {
+      "firstName": "ramesh",
+       "address":"319",
+       "city":"fresno"
+      },
+
+}
